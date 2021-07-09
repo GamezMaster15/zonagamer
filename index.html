@@ -173,7 +173,10 @@
       const buttonRegisterPC = document.querySelector('#button_register_pc');
 
       const resetContainer = () => {
-        container.innerHTML = `
+        $('#page-loader').show(500)
+        setTimeout(() => {
+          $('#page-loader').fadeOut(500);
+          container.innerHTML = `
       <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll" style="background-image: none; transition: none 0s ease 0s;  background-color: rgba(0, 0, 0, 0.3);backdrop-filter: blur(5px);">
         <div class="container"><a class="navbar-brand d-inline-flex mt-2" href="index.html"><span class="text-light fs-2 fw-bold ms-2">ZONA <span class="text-warning">GAMER</span></span></a>
           <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -318,6 +321,7 @@
 
       </section>
         `;
+        }, 3000);
       }
 
       buttonRegister.addEventListener('click', resetContainer);
