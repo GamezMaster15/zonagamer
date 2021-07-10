@@ -222,29 +222,29 @@
         </div>
         <div class="row">
           <div class="col-12 col-md-8 col-lg-6">
-            <div class="row">
+            <form class="row" name="participar" netlify>
               <div class="col-12">
                 <label class="fw-bold">Nombre Completo*</label>
-                <input type="text" name="fullname" placeholder="Nombre Completo" class="form-control bg-black">
+                <input type="text" name="fullname" placeholder="Nombre Completo" class="form-control bg-black" required="">
               </div>
               <div class="col-12 mt-3">
                 <label class="fw-bold">Nombre de Usuario Clash Royale*</label>
-                <input type="text" name="fullname" placeholder="Nombre de Usuario en Clash Royale" class="form-control bg-black">
+                <input type="text" name="username" placeholder="Nombre de Usuario en Clash Royale" class="form-control bg-black" required="">
               </div>
               <div class="col-12 mt-3">
                 <label class="fw-bold">Correo Electronico*</label>
-                <input type="text" name="fullname" placeholder="Correo Electronico" class="form-control bg-black">
+                <input type="email" name="email" placeholder="Correo Electronico" class="form-control bg-black" required="">
               </div>
               <div class="col-12 mt-3">
                 <label class="fw-bold">Numero de telefono*</label>
-                <input type="text" name="fullname" placeholder="Numero de telefono" class="form-control bg-black">
+                <input type="text" name="fullname" placeholder="Numero de telefono" class="form-control bg-black" required="">
               </div>
               <div class="col-12 mt-3">
-                <a href="#body" class="btn btn-black border-white mt-2" id="registerbuttom">
+                <button class="btn btn-black border-white mt-2" id="registerbuttom">
                   Registrarme
-                </a>
+                </button>
               </div>
-            </div>
+            </form>
           </div>
           <div class="col-lg-4 offset-2">
             <img src="assets/img/gallery/mago.png" class="w-100">
@@ -316,17 +316,6 @@
       </section>
         `;
 
-        const buttonRegisterSuccess = document.querySelector('#registerbuttom');
-        const send = () => {
-          $('#page-loader').show(500);
-          setTimeout(() => {            
-            $('#page-loader').fadeOut(500);
-            container.innerHTML = `
-              <h3>Solicitud enviada con exito</h3>
-            `;
-          },3000)
-        }
-        buttonRegisterSuccess.addEventListener('click', send)
         }, 3000);
       }
 
